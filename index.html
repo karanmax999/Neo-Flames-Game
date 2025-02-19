@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonFlames - Cosmic Art Studio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="app-header">
+                <h1>NeonFlames</h1>
+                <p class="subtitle">Cosmic Art Studio</p>
+            </div>
+
+            <!-- Tools Section -->
+            <div class="tools-section">
+                <!-- Color Picker -->
+                <div class="tool-group">
+                    <h3>🎨 Colors</h3>
+                    <div class="color-grid">
+                    <button class="color-btn" data-color="#ff0000" style="background-color: #ff0000"></button>
+                    <button class="color-btn" data-color="#00ff00" style="background-color: #00ff00"></button>
+                    <button class="color-btn" data-color="#0000ff" style="background-color: #0000ff"></button>
+                    <button class="color-btn" data-color="#ffff00" style="background-color: #ffff00"></button>
+                    <button class="color-btn" data-color="#ff00ff" style="background-color: #ff00ff"></button>
+                    <button class="color-btn" data-color="#ffa500" style="background-color: #ffa500"></button>
+                    <button class="color-btn" data-color="#00ffff" style="background-color: #00ffff"></button>
+                    <button class="color-btn" data-color="#ffffff" style="background-color: #ffffff"></button>
+
+                    </div>
+                </div>
+
+                <!-- Brush Controls -->
+                <div class="tool-group">
+                    <h3>🖌️ Brush</h3>
+                    <div class="brush-controls">
+                        <label>Size: <span id="brush-size-value">10</span></label>
+                        <input type="range" id="brush-size" min="1" max="100" value="10">
+                        <label>Opacity: <span id="brush-opacity-value">80%</span></label>
+                        <input type="range" id="brush-opacity" min="0.1" max="1" value="0.8" step="0.1">
+                    </div>
+                </div>
+
+                <!-- Effects -->
+                <div class="tool-group">
+                    <h3>✨ Effects</h3>
+                    <div class="effect-buttons">
+                        <button id="glow-effect" class="effect-btn">Glow</button>
+                        <button id="blur-effect" class="effect-btn">Blur</button>
+                    </div>
+                </div>
+
+                <!-- Advanced Tools -->
+                <div class="tool-group">
+                    <h3>⚙️ Advanced</h3>
+                    <div class="advanced-tools">
+                        <button id="particle-mode" class="mode-btn">Particles</button>
+                        <button id="text-mode" class="mode-btn">Text</button>
+                        <div id="text-controls" class="text-controls">
+                            <input type="text" id="text-input" placeholder="Enter text">
+                            <input type="number" id="font-size" min="10" max="100" value="30">
+                            <select id="font-family">
+                                <option value="Arial">Arial</option>
+                                <option value="Verdana">Verdana</option>
+                                <option value="Times New Roman">Times New Roman</option>
+                                <option value="Courier New">Courier New</option>
+                            </select>
+                            <select id="text-align">
+                                <option value="left">Left</option>
+                                <option value="center">Center</option>
+                                <option value="right">Right</option>
+                            </select>
+                            <label>
+                                Stroke Width:
+                                <input type="number" id="stroke-width" min="0" max="10" value="0">
+                            </label>
+                            <label>
+                                Stroke Color:
+                                <input type="color" id="stroke-color" value="#000000">
+                            </label>
+                            <label>
+                                Rotation:
+                                <input type="number" id="text-rotation" min="0" max="360" value="0">
+                            </label>
+                            <button id="add-text">Add Text</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Save Button -->
+                <div class="save-section">
+                    <button id="save-btn" class="save-btn">
+                        💾 Save Artwork
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Canvas -->
+        <div class="canvas-container">
+            <canvas id="nebula-canvas"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
